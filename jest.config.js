@@ -8,7 +8,7 @@ const createJestConfig = nextJest({
   testRegex: ".*\\..*spec\\.ts$",
   coverageDirectory: "__coverage",
   coverageProvider: "v8",
-  collectCoverage: true
+  collectCoverage: true,
 });
 
 // Add any custom config to be passed to Jest

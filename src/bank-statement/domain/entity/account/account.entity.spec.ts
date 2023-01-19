@@ -9,7 +9,7 @@ describe("Unit: Account entity", () => {
 
   it("should create an entity", () => {
     const validation = {
-      execute: jest.fn().mockReturnValue({ errors: [] })
+      execute: jest.fn().mockReturnValue({ errors: [] }),
     } as unknown as ValidationUsecase<InputAccountEntity>;
 
     const input: InputAccountEntity = {
@@ -29,7 +29,7 @@ describe("Unit: Account entity", () => {
 
   it("should throw an error", () => {
     const validation = {
-      execute: jest.fn().mockReturnValue({ errors: [{}] })
+      execute: jest.fn().mockReturnValue({ errors: [{}] }),
     } as unknown as ValidationUsecase<InputAccountEntity>;
 
     const input = {} as InputAccountEntity;

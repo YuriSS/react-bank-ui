@@ -16,8 +16,7 @@ describe("Unit: Create account use case", () => {
       name: "Test",
     };
 
-    const account =
-      CreateAccountUsecaseFactory.create(validation).execute(rawAccount);
+    const account = CreateAccountUsecaseFactory.create(validation).execute(rawAccount);
 
     expect(account.name).toBe(rawAccount.name);
     expect(account.bank).toBe(rawAccount.bank);

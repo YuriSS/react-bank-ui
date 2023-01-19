@@ -26,10 +26,7 @@ describe("Unit: Create transaction use case", () => {
       value: { currency: CurrencyEnum.BRL, value: 300 },
     };
 
-    const output = CreateTransactionUsecaseFactory.create(
-      transactionValidation,
-      createAccountUsecase
-    ).execute(input);
+    const output = CreateTransactionUsecaseFactory.create(transactionValidation, createAccountUsecase).execute(input);
 
     expect(output.id).toBeInstanceOf(Identifier);
     expect(output.id.value).toBe(input.id);
@@ -52,10 +49,7 @@ describe("Unit: Create transaction use case", () => {
     const input = {} as RawTransaction;
 
     expect(() => {
-      CreateTransactionUsecaseFactory.create(
-        transactionValidation,
-        createAccountUsecase
-      ).execute(input);
+      CreateTransactionUsecaseFactory.create(transactionValidation, createAccountUsecase).execute(input);
     }).toThrowError(ValidationError);
   });
 });

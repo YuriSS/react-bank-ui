@@ -1,3 +1,4 @@
+import { Identifier } from "@/@shared/domain/value-object/identifier/identifier.value-object";
 import { TransactionApi } from "@/bank-statement/domain/api/transaction/transaction.api";
 import { ListTransactionUsecaseFactory } from "@/bank-statement/domain/use-case/list-transaction/list-transaction.use-case";
 
@@ -15,11 +16,9 @@ describe("Unit: list transactions", () => {
 
     const api: TransactionApi = { list: "/transaction/list" } as TransactionApi;
 
-    const output = await ListTransactionUsecaseFactory.create(
-      request,
-      api,
-      createTranasctionUsecase
-    ).execute({});
+    const output = await ListTransactionUsecaseFactory.create(request, api, createTranasctionUsecase).execute({
+      id: new Identifier({ id: "1" }),
+    });
 
     expect(request.get).toHaveBeenCalledTimes(1);
     expect(request.get).toHaveBeenCalledWith(api.list, {});

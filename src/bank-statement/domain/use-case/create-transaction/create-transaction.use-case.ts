@@ -8,9 +8,7 @@ import { Account } from "@/bank-statement/domain/entity/account/account.entity";
 import { Money } from "@/bank-statement/domain/value-object/money/money.value-object";
 import { RawTransaction } from "@/bank-statement/domain/use-case/create-transaction/create-transaction.use-case.type";
 
-export class CreateTransactionUsecase
-  implements Usecase<RawTransaction, Transaction>
-{
+export class CreateTransactionUsecase implements Usecase<RawTransaction, Transaction> {
   public constructor(
     private transactionValidation: ValidationUsecase<InputTransactionEntity>,
     private createAccountUsecase: Usecase<RawAccount, Account>

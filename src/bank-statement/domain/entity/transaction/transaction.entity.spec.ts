@@ -11,11 +11,11 @@ import { InputTransactionEntity } from "@/bank-statement/domain/entity/transacti
 describe("Unit: Transaction entity", () => {
   it("should create an entity", () => {
     const validation = {
-      execute: jest.fn().mockReturnValue({ errors: [] })
+      execute: jest.fn().mockReturnValue({ errors: [] }),
     } as unknown as ValidationUsecase<InputTransactionEntity>;
 
     const accountValidation = {
-      execute: jest.fn().mockReturnValue({ errors: [] })
+      execute: jest.fn().mockReturnValue({ errors: [] }),
     } as unknown as ValidationUsecase<InputAccountEntity>;
 
     const input: InputTransactionEntity = {
@@ -62,7 +62,7 @@ describe("Unit: Transaction entity", () => {
 
   it("should throw an error", () => {
     const validation = {
-      execute: jest.fn().mockReturnValue({ errors: [{}] })
+      execute: jest.fn().mockReturnValue({ errors: [{}] }),
     } as unknown as ValidationUsecase<InputTransactionEntity>;
 
     const input = {} as InputTransactionEntity;

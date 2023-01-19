@@ -1,8 +1,10 @@
+import { Identifier } from "@/@shared/domain/value-object/identifier/identifier.value-object";
 import { Transaction } from "@/bank-statement/domain/entity/transaction/transaction.entity";
-import { InputTransactionEntity } from "@/bank-statement/domain/entity/transaction/transaction.entity.type";
-import { InputAccountEntity } from "@/bank-statement/domain/entity/account/account.entity.type";
+import { RawTransaction } from "@/bank-statement/domain/use-case/create-transaction/create-transaction.use-case.type";
 
-export interface InputListTransactionDto {}
+export interface InputListTransactionDto {
+  id: Identifier;
+}
 
 export interface OutputListTransactionDto {
   transactions: Transaction[];
@@ -11,6 +13,3 @@ export interface OutputListTransactionDto {
 export interface OutputRequestListTransaction {
   transactions: RawTransaction[];
 }
-
-
-

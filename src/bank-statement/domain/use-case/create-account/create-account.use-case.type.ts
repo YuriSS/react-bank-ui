@@ -2,4 +2,4 @@ import { InputAccountEntity } from "@/bank-statement/domain/entity/account/accou
 
 export type RawAccount = Omit<InputAccountEntity, "id"> & {
   id: string;
-}
+};

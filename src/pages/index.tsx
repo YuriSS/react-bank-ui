@@ -1,5 +1,5 @@
-import Head from 'next/head'
-import tw from "tailwind-styled-components"
+import Head from "next/head";
+import tw from "tailwind-styled-components";
 
 export default function Home() {
   return (
@@ -10,11 +10,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container>
-        Auei
-      </Container>
+      <Container>Auei</Container>
     </>
-  )
+  );
 }
 
 interface ContainerProps {
@@ -22,6 +20,6 @@ interface ContainerProps {
 }
 
 const Container = tw.main<ContainerProps>`
-  ${props => props.full ? "px-5" : "w-3/4 m-auto"}
+  ${(props) => (props.full ? "px-5" : "w-3/4 m-auto")}
   py-5
-`
+`;

@@ -1,7 +1,4 @@
-import {
-  CurrencyEnum,
-  InputMoneyEntity,
-} from "@/bank-statement/domain/value-object/money/money.value-object.type";
+import { CurrencyEnum, InputMoneyEntity } from "@/bank-statement/domain/value-object/money/money.value-object.type";
 
 export class Money {
   public constructor(private _fields: InputMoneyEntity) {}

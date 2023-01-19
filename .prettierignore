@@ -1,0 +1,12 @@
+*.js                                                                                                              
+*.yml
+*.md
+**/*.md
+**/*.svg
+**/template/*
+node_modules
+test-reports
+coverage/
+publish/
+schematics/
+package.json

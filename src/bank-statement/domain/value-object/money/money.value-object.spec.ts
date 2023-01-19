@@ -1,5 +1,5 @@
-import { Money } from "./money.value-object";
-import { CurrencyEnum } from "./money.value-object.type";
+import { Money } from "@/bank-statement/domain/value-object/money/money.value-object";
+import { CurrencyEnum } from "@/bank-statement/domain/value-object/money/money.value-object.type";
 
 describe("Unit: Money value object", () => {
   it("should create an entity", () => {

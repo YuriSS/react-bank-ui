@@ -6,7 +6,7 @@ import { RawAccount } from "@/bank-statement/domain/use-case/create-account/crea
 import { CreateTransactionUsecaseFactory } from "@/bank-statement/domain/use-case/create-transaction/create-transaction.use-case";
 import { RawTransaction } from "@/bank-statement/domain/use-case/create-transaction/create-transaction.use-case.type";
 import { ValidationError } from "@/@shared/domain/error/validation/validation.error";
-import { CreateAccountUsecase } from "../create-account/create-account.use-case";
+import { CreateAccountUsecase } from "@/bank-statement/domain/use-case/create-account/create-account.use-case";
 
 describe("Unit: Create transaction use case", () => {
   it("should create a transaction", () => {

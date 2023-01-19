@@ -1,4 +1,4 @@
-export interface ValidationErrorOutput<Entity> {
+export interface OutputValidationError<Entity> {
   message: string;
   key: keyof Entity;
   value: unknown;
@@ -9,7 +9,7 @@ export interface InputValidator<Entity> {
 }
 
 export interface OutputValidator<Entity> {
-  errors: Array<ValidationErrorOutput<Entity>>;
+  errors: Array<OutputValidationError<Entity>>;
 }
 
 export interface Validator<Entity> {
@@ -17,4 +17,3 @@ export interface Validator<Entity> {
   maxLength: (input: InputValidator<Entity> & { max: number }) => Validator<Entity>;
   validate: (input: Entity) => OutputValidator<Entity>;
 }
-

@@ -1,7 +1,7 @@
-import { OutputValidator, ValidationErrorOutput } from "@/@shared/domain/validation/validation";
+import { OutputValidator, OutputValidationError } from "@/@shared/domain/data/validator/validator.data";
 
 export class ValidationError<Entity> extends Error {
-  public errors: Array<ValidationErrorOutput<Entity>>
+  public errors: Array<OutputValidationError<Entity>>
 
   public constructor(outpuValidator: OutputValidator<Entity>) {
     super(outpuValidator.errors.join(", "));

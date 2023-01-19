@@ -14,3 +14,13 @@ export abstract class ValidationUsecase<Entity> implements Usecase<Entity, Outpu
     return this.validator;
   }
 }
+
+export class FakeValidationUsecase<T> extends ValidationUsecase<T> {
+  public constructor(validator: Validator<T>) {
+    super(validator);
+  }
+
+  protected configureValidation(): Validator<T> {
+    return this.validator;
+  }
+}

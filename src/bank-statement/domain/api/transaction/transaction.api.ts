@@ -1,4 +1,4 @@
-import { Api } from "@/@shared/domain/use-case/request/request.use-case";
+import { Api } from "@/@shared/domain/data/request/request.data";
 
 export interface TransactionApi extends Api {
   list: string;

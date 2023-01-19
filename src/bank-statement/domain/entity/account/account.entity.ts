@@ -1,9 +1,9 @@
 import { Entity } from "@/@shared/domain/entity/entity";
-import { Validation } from "@/@shared/domain/validation/validation";
+import { ValidationUsecase } from "@/@shared/domain/use-case/validation/validation.use-case";
 import { InputAccountEntity } from "@/bank-statement/domain/entity/account/account.entity.type";
 
 export class Account extends Entity<InputAccountEntity, InputAccountEntity> {
-  public constructor(fields: InputAccountEntity, validation: Validation<InputAccountEntity>) {
+  public constructor(fields: InputAccountEntity, validation: ValidationUsecase<InputAccountEntity>) {
     super(fields, validation);
   }
 

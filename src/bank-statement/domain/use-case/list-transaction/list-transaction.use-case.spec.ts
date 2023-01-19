@@ -21,7 +21,7 @@ describe("Unit: list transactions", () => {
     });
 
     expect(request.get).toHaveBeenCalledTimes(1);
-    expect(request.get).toHaveBeenCalledWith(api.list, {});
+    expect(request.get).toHaveBeenCalledWith(api.list, { id: new Identifier({ id: "1" }) });
 
     expect(createTranasctionUsecase.execute).toHaveBeenCalledTimes(2);
     expect(createTranasctionUsecase.execute.mock.calls).toEqual([[1], [2]]);
